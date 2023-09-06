@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <h1>Language Translator</h1>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Premium</a></li>
+                    <li style="float:right;color:white;font-size:36px"><i class='fa fa-user-circle-o'></i></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="spokentext">
+            <div class="gradient-border">
+                <i class="fa fa-microphone" style="font-size:36px;color: white;"></i>
+                <h2>Speak Something...</h2>
+            </div>
+            <div class="text">
+                <p>This is your Spoken Text.</p>
+            </div>
+        </div>
+
+        <div class="btnandlang">
+            <div class="btnconvert">Convert</div>
+            <div class="langselector">
+                <select id="languageDropdown" class="lang">
+                    <!-- Dropdown options will be generated here -->
+                </select>
+            </div>
+        </div>
+
+        <div class="convertedtext">
+            <div class="text">
+                <p>This is your Converted Text.</p>
+            </div>
+            <div class="controls">
+                <ul>
+                    <li><i class="fa fa-download" style="font-size:30px"></i></li>
+                    <li><i class="fa fa-copy" style="font-size:30px;"></i></li>
+                    <li><i class="fa fa-volume-up" style="font-size:30px"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="script.js"></script>

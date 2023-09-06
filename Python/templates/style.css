@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+/*Navigation Bar Styles*/
+
+.navbar {
+    margin: 0;
+    background-color:dodgerblue;
+    padding: 1%;
+}
+
+.navbar nav {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar nav ul li {
+    display: block;
+    float: right;
+}
+
+.navbar nav h1 {
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+}
+
+.navbar nav ul a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*Spoken Text Styles*/
+
+.spokentext {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.spokentext .text {
+    margin-top: 20px;
+    padding: 5%;
+    background-color: #333;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #eaeaeb;
+}
+
+
+/*Button and Drop down list*/
+
+.btnandlang {
+    margin-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnandlang .btnconvert {
+    cursor: pointer;
+    background-color: dodgerblue;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.langselector .lang {
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: dodgerblue;
+    padding: 10%;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+/*Mic Border gradient color*/
+
+.spokentext .gradient-border {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #333;
+    padding: 1.5%;
+    border: none;
+    outline: none;
+    max-width: max-content;
+    height: fit-content;
+
+    --borderWidth: 5px;
+    position: relative;
+    border-radius: var(--borderWidth);
+}
+
+
+.spokentext .gradient-border h2 {
+    color: #eaeaeb;
+    margin-left: 20px;
+    font-family: 'Raleway';
+}
+
+.spokentext .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/*Converted Text Styles*/
+.convertedtext{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.convertedtext .text{
+    margin-top: 20px;
+    padding: 5%;
+    background-color: #333;
+    border: none;
+    outline: none;
+    color: #eaeaeb;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/*Control Styles*/
+
+.convertedtext .controls{
+    background-color: #222;
+    padding: 1%;
+}
+
+.convertedtext .controls ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.convertedtext .controls ul li{
+    margin-left: 20px;
+}
+
+.convertedtext .controls ul i{
+    color: white;
+}
