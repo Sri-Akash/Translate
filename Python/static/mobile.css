@@ -1,0 +1,52 @@
+@media screen and (min-width: 100px) and (max-width: 799px) {
+
+.container{
+    margin: 0 auto;
+    font-size:x-small;
+}
+
+@media screen and (min-width: 100px) and (max-width: 350px) {
+    *{
+        font-size: xx-small;
+    }
+    .spokentext .text{
+        width: auto;
+        padding: 20%;
+    }
+    
+    .convertedtext .text{
+        width: auto;
+        padding: 20%;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 799px) {
+    *{
+        font-size: 15px;
+    }
+    .spokentext .text{
+        width: auto;
+        padding: 10%;
+    }
+    
+    .convertedtext .text{
+        width: auto;
+        padding: 10%;
+    }
+}
+
+.btnandlang .btnconvert{
+    width: auto;
+    padding: 2.5%;
+}
+
+.langselector .lang{
+    width: auto;
+    padding: 6.5%;
+}
+
+.convertedtext .controls ul button{
+    padding: 1.5px;
+}
+
+}

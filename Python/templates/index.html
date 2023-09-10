@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Translator</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Responsive Css Links -->
+
+    <link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href="{{ url_for('static', filename='mobile.css') }}" />
+
 </head>
+
 <body>
     <div class="container">
         <div class="navbar">
@@ -22,38 +29,49 @@
         </div>
 
         <div class="spokentext">
-            <div class="gradient-border">
-                <i class="fa fa-microphone" style="font-size:36px;color: white;"></i>
-                <h2>Speak Something...</h2>
-            </div>
-            <div class="text">
-                <p>This is your Spoken Text.</p>
-            </div>
+            <form name="mic" action="/mic-on">
+                <button class="gradient-border">
+                    <i class="fa fa-microphone" style="font-size:36px;color: white;"></i>
+                    <h2>Speak Something...</h2>
+                </button>
+
+                <div class="text">
+                    <p>{{spoken}}</p>
+                </div>
+            </form>
         </div>
 
-        <div class="btnandlang">
-            <div class="btnconvert">Convert</div>
-            <div class="langselector">
-                <select id="languageDropdown" class="lang">
-                    <!-- Dropdown options will be generated here -->
-                </select>
-            </div>
+        <div>
+            <form class="btnandlang" name="conv" action="/convert" method="post">
+                <button class="btnconvert">Convert</button>
+
+                <div class="langselector">
+                    <select id="languageDropdown" class="lang" name="lang">
+                        <!-- Dropdown options will be generated here -->
+                    </select>
+                </div>
+            </form>
         </div>
 
         <div class="convertedtext">
             <div class="text">
-                <p>This is your Converted Text.</p>
+                <p>{{translated}}</p>
             </div>
+
             <div class="controls">
                 <ul>
-                    <li><i class="fa fa-download" style="font-size:30px"></i></li>
-                    <li><i class="fa fa-copy" style="font-size:30px;"></i></li>
-                    <li><i class="fa fa-volume-up" style="font-size:30px"></i></li>
+                    <form action="/download">
+                        <li><button><i class="fa fa-download" style="font-size:30px"></i></button></li>
+                    </form>
+                    <li><button id="copy-button"><i class="fa fa-copy" style="font-size:30px;"></i></button></li>
+                    <form action="/speak-on">
+                        <li><button><i class="fa fa-volume-up" style="font-size:30px"></i></button></li>
+                    </form>
                 </ul>
             </div>
         </div>
     </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-</html>
 
-<script src="script.js"></script>
+</html>
