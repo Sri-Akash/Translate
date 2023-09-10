@@ -1,0 +1,14 @@
+App Name : Language Translator
+Created on : 07-09-2023
+Developed By : Sri Akash
+Languages Using : Html, Css, Js, Flask in Python
+
+App Description:
+    This app is used to trnslate your native language to your required language.
+    Using this app you can able to speak with your language and get your speaked text and then convert the text to you selected language.
+    After converting you can able to do the operations like speak the converted text, copy of your converted text and download when you want.
+
+App Issues:
+    1. When you click on the speak button this will speak only one time. When you click on the second time then that says error called "Already the loop is running".
+    2. Didn't able to controll the traffic when more than one users accessing the microphone or Something.
+    3. 
