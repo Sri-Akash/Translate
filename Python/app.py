@@ -3,8 +3,6 @@ import speech_recognition as sr
 import pyttsx3
 from googletrans import Translator, LANGUAGES
 from flask_ngrok import run_with_ngrok
-from gtts import gTTS
-import os
 
 # Initialize Flask
 app = Flask(__name__)
@@ -81,7 +79,6 @@ def speak():
 def download():
     text_content = session.get('trans', '')
 
-    # Create a response with the text content and set headers for downloading
     response = Response(text_content, content_type='text/plain')
     response.headers["Content-Disposition"] = "attachment; filename=downloaded_text.txt"
 

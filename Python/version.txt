@@ -1,14 +1,30 @@
 App Name : Language Translator
+Version : 1.0v
 Created on : 07-09-2023
 Developed By : Sri Akash
 Languages Using : Html, Css, Js, Flask in Python
 
-App Description:
-    This app is used to trnslate your native language to your required language.
-    Using this app you can able to speak with your language and get your speaked text and then convert the text to you selected language.
+App Description:[1.0v]
+    This app is used to translate your native language to your required language.
+    Using this app you can able to speak with your language and get your spoke text and then convert the text to your selected language.
     After converting you can able to do the operations like speak the converted text, copy of your converted text and download when you want.
 
-App Issues:
+App Issues:[1.0v]
     1. When you click on the speak button this will speak only one time. When you click on the second time then that says error called "Already the loop is running".
-    2. Didn't able to controll the traffic when more than one users accessing the microphone or Something.
-    3. 
+    2. Didn't able to control the traffic when more than one users accessing the microphone or Something.
+    3. Sometimes google didn't recognize your audio because there is unwanted noise are occurs.
+    4. When you click on convert button then the spoke text is disappeared.
+    5. While opening the downloaded text file the languages like Tamil, Africans are not in their language they appears like symbols for some device.
+
+App Features:[1.0v]
+    1. Microphone recognition working well.
+    2. Supports text convertion for all languages.
+    3. Supports copy and download options.
+    4. Supports halfly on speak option.
+    5. Supports for all devices [Responsive Application].
+
+App not Covered:[1.0v]
+    1. No sign in and sign up option.
+    2. Premium Enabling.
+    3. 24/7 Customer Supports.
+    4. Database concept.
