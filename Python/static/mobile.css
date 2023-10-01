@@ -1,4 +1,4 @@
-@media screen and (min-width: 100px) and (max-width: 799px) {
+@media screen and (min-width: 100px) and (max-width: 850px) {
 
 .container{
     margin: 0 auto;
@@ -13,10 +13,46 @@
         width: auto;
         padding: 20%;
     }
+
+    .spokentext .gradient-border i{
+        font-size:20px;
+    }
     
+    .howtouse button{
+        padding: 8px 10px;
+    }
+
     .convertedtext .text{
         width: auto;
         padding: 20%;
+    }
+
+    .content .btngoogle{
+        font-size: 5px;
+    }
+
+    .content .btngoogle img{
+        width: 20px;
+        height: 20px;
+    }
+    .btnandlang .btnconvert{
+        padding: 1%;
+        border-radius: 5px;
+
+    }
+    
+    .langselector .lang{
+        padding: 3%;
+        border-radius: 5px;
+
+    }
+
+    .convertedtext .controls ul i{
+        font-size:18px;
+    }
+
+    .coutings{
+        display: grid;
     }
 }
 
@@ -29,24 +65,46 @@
         padding: 10%;
     }
     
+    .howtouse button{
+        padding: 8px 10px;
+    }
+
     .convertedtext .text{
         width: auto;
         padding: 10%;
     }
+
+    .spokentext .gradient-border i{
+        font-size:30px;
+    }
+
+    .btnandlang .btnconvert{
+        padding: 1%;
+    }
+    
+    .langselector .lang{
+        padding: 3%;
+    }
+
+    .convertedtext .controls ul i{
+        font-size:25px;
+    }
 }
 
-.btnandlang .btnconvert{
-    width: auto;
-    padding: 2.5%;
-}
 
-.langselector .lang{
-    width: auto;
-    padding: 6.5%;
-}
 
 .convertedtext .controls ul button{
     padding: 1.5px;
+}
+
+.content .btngoogle{
+    font-size: 10px;
+    letter-spacing: 0;
+}
+
+.content .btngoogle img{
+    width: 25px;
+    height: 25px;
 }
 
 }

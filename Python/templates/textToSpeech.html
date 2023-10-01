@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Text To Speech</title>
+    <link rel="stylesheet" href="../static/textToSpeech.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <header class="head">
+        <nav>
+            <h1>Text to Speech</h1>
+            <ul>
+                <li><a href="/redirect-home">Home</a></li>
+                <li><a href="#">Ai Tools</a></li>
+                <li><a href="#">Premium</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+      </header>
+
+      <div class="howtouse">
+        <button type="button" id="readBtn" onclick="displayIns()">Read Instructions</button>
+        <ul id="instruct">
+            <li>Type your text on the below <b><i>TextBox</i></b>.</li>
+            <li>After successfully typed select your destination language in the <b><i>Drop down List</i></b>.</li>
+            <li>Then you can able to convert your text to the selected language text.</li>
+            <li>You can able to <b><i>Download</i></b> the audio file as a <b><i>.Mp3</i></b> format.</li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <header>Text To Speech</header>
+        <form action="/download-audio" method="post">
+          <div class="row">
+            <label>Enter Text</label>
+            <textarea name="input_text"></textarea>
+          </div>
+          <div class="row">
+            <label>Select Voice</label>
+            <div class="outer">
+              <select></select>
+            </div>
+          </div>
+          <button class="btnconvert">Convert To Speech</button>
+          <button type="submit" class="btndownload"><i class="fa-solid fa-download" style="color: #fff;font-size:30px;">&nbsp;</i>Download Audio</button>
+          <span id="error">{{err}}</span>
+        </form>
+      </div>
+    </div>
+    
+
+    <script src="../static/textToSpeech.js"></script>
+
+  </body>
+</html>

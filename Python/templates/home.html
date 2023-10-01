@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic Ai Worlds</title>
+    <link rel="stylesheet" href="../static/home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header class="head">
+        <nav>
+            <img src="../static/logo.png" class="logo">
+            <h1>Generic Ai World</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Ai Tools</a></li>
+                <li><a href="#">Premium</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <img src="../static/user.png" class="user-pic" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="../static/user.png">
+                        <h2>Name</h2>
+                        <p>{{user}}</p>
+                        <h2>Email</h2>
+                        <p>{{email}}</p>
+                        <h2>Password</h2>
+                        <p>{{pasw}}</p>
+                    </div>
+                    <hr>
+
+                    <a href="/signout" class="sub-menu-link">
+                        <i class='bx bx-log-out icon'></i>
+                        <p>Signout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero_content" id="hero">
+        <div class="body_container">
+            <div class="intro">
+                <h1>Generic Ai World</h1>
+                <p>Welcome to Generic AI World, your gateway to a realm of powerful AI tools designed to enhance your
+                    digital experience. Explore a suite of cutting-edge applications crafted to bring text and speech to
+                    life effortlessly.</p>
+            </div>
+    </section>
+
+    <section class="ai_tools_content" id="ai_tools">
+        <div class="project">
+            <h1>Language Translator</h1>
+            <p> This app is used to translate your native language to your required language.
+                Using this app you can able to speak with your language and get your spoke text and then convert the
+                text to your selected language.
+                After converting you can able to do the operations like speak the converted text, copy of your converted
+                text and download when you want.
+            </p>
+            <a href="/demoLangTrans" target="_blank"><button class="btndemo">DEMO</button></a>
+        </div>
+
+        <div class="project">
+            <h1>Text to Speech</h1>
+            <p> This app is used to convert your text to hearable audio.
+                Using this app you can able to give the text as a input then you can able to listen the audio.
+                After listening you can able to download the audio file as [.mp3] format for your future use.
+            </p>
+            <a href="/demoTextSpeech" target="_blank"><button class="btndemo">DEMO</button></a>
+        </div>
+    </section><br>
+
+
+    <script>
+        let subMenu = document.getElementById("subMenu")
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu")
+        }
+    </script>
+</body>
+
+</html>

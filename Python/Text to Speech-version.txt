@@ -1,0 +1,10 @@
+App Name : Text to Speech
+Version : 1.0v
+Created on : 16-09-2023
+Developed By : Sri Akash
+Languages Using : Html, Css, Js, Flask in Python
+
+App Description:[1.0v]
+    This app is used to convert your text to hearable audio.
+    Using this app you can able to give the text as a input then you can able to listen the audio.
+    After listening you can able to download the audio file as [.mp3] format for your future use.

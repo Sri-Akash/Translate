@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic Ai World - Signup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='signin.css') }}">
+    <link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href="{{ url_for('static', filename='mobile.css') }}" />
+</head>
+
+<body>
+    <div class="container">
+        <form action="/signup" method="post" class="content">
+            <img src="../static/logo.png" alt="logo" class="logoimg" />
+            <h1 class="header">Generic Ai World</h1>
+            <input type="text" name="txt_user" id="user" placeholder="Username" required>
+            <input type="email" name="txt_email" id="email" placeholder="Email" required>
+            <input type="password" name="txt_pass" id="pass" placeholder="Password" required>
+            <input type="password" name="txt_conf" id="conf" placeholder="Confirm Password" required><br>
+            <span id="error">{{msg}}</span><br>
+            <button type="submit" class="btnsignin">Signup</button>
+            <p>or</p>
+            <button type="button" class="btngoogle"><img src="{{ url_for('static', filename='google.png')}}" />Continue
+                with google</button>
+            <p>Already have an account? <a href="{{ url_for('signin')}}">Signup</a></p><br>
+        </form>
+    </div>
+</body>
+
+</html>

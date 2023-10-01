@@ -7,6 +7,7 @@
     <title>Language Translator</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
 
     <!-- Responsive Css Links -->
 
@@ -16,59 +17,106 @@
 
 <body>
     <div class="container">
-        <div class="navbar">
+
+        <header class="head">
             <nav>
+                <h1>Language Translator</h1>
                 <ul>
-                    <h1>Language Translator</h1>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/redirect-home">Home</a></li>
+                    <li><a href="#">Ai Tools</a></li>
                     <li><a href="#">Premium</a></li>
-                    <li style="float:right;color:white;font-size:36px"><i class='fa fa-user-circle-o'></i></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+        </header>
+        <div class="howtouse">
+            <button type="button" id="readBtn" onclick="displayIns()">Read Instructions</button>
+            <ul id="instruct">
+                <li>Click on the below <b><i>Click Me</i></b> Gradient Button to turn on the mic. </li>
+                <li>After give your voice input it will successfully displayed your spoken text in the below <b><i>Black Box</i></b>.</li>
+                <li>Then you need to select your destination language and then click on the <b><i>Convert Button</i></b> to convert your text.</li>
+                <li>After converting the text will be displayed in the below <b><i>Black Box</i></b>.</li>
+                <li>You can able to <b><i>Download</i></b>, <b><i>Copy</i></b>, and also <b><i>Listen Your Audio</i></b>.</li>
+            </ul>
         </div>
-
         <div class="spokentext">
             <form name="mic" action="/mic-on">
-                <button class="gradient-border">
-                    <i class="fa fa-microphone" style="font-size:36px;color: white;"></i>
-                    <h2>Speak Something...</h2>
+                <button class="gradient-border" onclick="displayMsg()">
+                    <i class="fa fa-microphone"></i>
+                    <h2 id="recog">Click Me</h2>
                 </button>
 
                 <div class="text">
-                    <p>{{spoken}}</p>
+                    <p name="spoken_text">{{spoken}}</p>
                 </div>
             </form>
         </div>
 
         <div>
             <form class="btnandlang" name="conv" action="/convert" method="post">
-                <button class="btnconvert">Convert</button>
 
                 <div class="langselector">
                     <select id="languageDropdown" class="lang" name="lang">
                         <!-- Dropdown options will be generated here -->
                     </select>
                 </div>
+
+                <button class="btnconvert">Convert</button>
+
+                
             </form>
         </div>
 
         <div class="convertedtext">
             <div class="text">
-                <p>{{translated}}</p>
+                <p class="translated_text">{{translated}}</p>
             </div>
 
             <div class="controls">
                 <ul>
                     <form action="/download">
-                        <li><button><i class="fa fa-download" style="font-size:30px"></i></button></li>
+                        <li><button><i class="fa fa-download"></i></button></li>
                     </form>
-                    <li><button id="copy-button"><i class="fa fa-copy" style="font-size:30px;"></i></button></li>
-                    <form action="/speak-on">
-                        <li><button><i class="fa fa-volume-up" style="font-size:30px"></i></button></li>
+                    <li><button id="copy-button"><i class="fa fa-copy"></i></button></li>
+                    <form>
+                        <li><button class="speechBtn"><i class="fa fa-volume-up"></i></button></li>
                     </form>
                 </ul>
             </div>
         </div>
+
+        <div class="countings">
+            <div class="sub">
+                <div class="words">
+                    <h1>{{words}}</h1>
+                    <h3>Words</h3>
+                </div>
+                <div class="alphabets">
+                    <h1>{{alphabets}}</h1>
+                    <h3>Alphabets</h3>
+                </div>
+                <div class="vowels">
+                    <h1>{{vowel}}</h1>
+                    <h3>Vowels</h3>
+                </div>
+            </div>
+            <div class="sub">
+                <div class="digits">
+                    <h1>{{digits}}</h1>
+                    <h3>Digits</h3>
+                </div>
+                <div class="specialChars">
+                    <h1>{{specialChars}}</h1>
+                    <h3>Symbols</h3>
+                </div>
+                <div class="whitespaces">
+                    <h1>{{whitespaces}}</h1>
+                    <h3>Whitespaces</h3>
+                </div>
+            </div>
+            
+        </div>
+        <br>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
